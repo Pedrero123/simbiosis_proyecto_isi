@@ -280,6 +280,7 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | --- | --- | --- | --- | --- | --- | --- |
 | NFR-07 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
 |NFR-001|NFR-Q(Disponibilidad)|La plataforma alcanzará una disponibilidad mínima del 99,5% en cada mes natural| G | - |Medida mediante comprobaciones externas cada cinco minutos|A3 s1.1|
+| NFR-002 | NFR-Q (Seguridad; Integridad) | Los datos de salud de los pacientes tendrán carácter estrictamente privado y solo serán accesibles por el propio paciente y sus cuidadores expresamente autorizados. | G | Acta Sec. 2, 7.1 | Prueba de penetración y auditoría de matriz de control de acceso basada en roles (RBAC). | A3-s.1.2 |
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
