@@ -54,7 +54,7 @@ La autorización de una relación de cuidado se mantiene diferenciada de la veri
 
 ### 4.1 Primera vista
 
-**Título:** Acceso, cuentas y ayuda
+**Título:** Modelo de casos de uso acceso cuentas ayuda
 
 **Alcance:** Representa los casos de uso seleccionados para E1 relacionados con el registro y acceso local, la gestión básica de cuentas, los perfiles y relaciones de cuidado, y la ayuda y bienvenida.
 
