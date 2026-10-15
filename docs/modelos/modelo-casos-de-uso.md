@@ -2,9 +2,9 @@
 
 | Versión | Fecha | Estado |
 | --- | --- | --- |
-| 1.6 | 11/10/2026 | Revisado |
+| 1.7 | 11/10/2026 | Borrador |
 
-**Iteración de referencia:** E1. Este documento recoge la primera vista revisada del modelo. Será el punto de partida para ampliarlo en E2.
+**Iteración de referencia:** E2. Este documento recoge la primera vista del modelo. Será el punto de partida para ampliarlo en E2.
 
 **Plantilla base:** [Plantilla del modelo de casos de uso](plantilla-modelo-casos-de-uso.md). La plantilla se conserva sin cumplimentar. Los resultados del proyecto se incorporan a este documento.
 
@@ -69,6 +69,15 @@ Los objetivos de esta tabla son resúmenes. Las descripciones detalladas quedan 
 | UC-09 | Consultar ayuda | Consultar las instrucciones y los temas de ayuda de las funciones seleccionadas. | Principal: Usuario. |
 | UC-10 | Recorrer bienvenida | Conocer las funciones básicas mediante el recorrido del primer acceso, con la posibilidad de omitirlo. | Principal: Usuario registrado. |
 | UC-11 | Enviar correo electrónico | Enviar el mensaje que necesita el caso de uso que lo incluye. | Apoyo: Servicio de correo electrónico. No se asigna un actor principal independiente. |
+| UC-12 | Registrar datos de salud | Introducir manualmente datos fisiológicos, resultados de laboratorio o notas de síntomas, con sus fechas, unidades y validaciones. | Principal: Paciente. |
+| UC-13 | Corregir dato de salud | Modificar un dato de salud propio introducido por error. | Principal: Paciente. |
+| UC-14 | Consultar historial de salud | Consultar los datos de salud propios, filtrarlos por tipo y ver sus gráficas. | Principal: Paciente. |
+| UC-15 | Exportar datos de salud | Obtener los datos de salud propios en PDF o CSV. | Principal: Paciente. |
+| UC-16 | Autorizar acceso de nutricionista | Autorizar a un nutricionista concreto, identificado por su correo, para consultar los datos de salud propios. | Principal: Paciente. |
+| UC-17 | Invitar a nutricionista | Invitar a registrarse a un nutricionista cuyo correo no corresponde a ninguna cuenta. | Principal: Paciente, mediante UC-16. Apoyo: Servicio de correo electrónico, mediante UC-11. |
+| UC-18 | Revocar acceso de nutricionista | Retirar la autorización concedida a un nutricionista para que no pueda realizar nuevas consultas. | Principal: Paciente. |
+| UC-19 | Autorizar acceso de cuidador a datos de salud | Seleccionar qué datos de salud puede consultar un cuidador con relación de cuidado activa. | Principal: Paciente. |
+| UC-20 | Consultar datos de salud de paciente | Consultar los datos de salud de un paciente que ha autorizado ese acceso. | Principal: Nutricionista, Cuidador. |
 | UC-31 | Aprobar cuenta de cuidador o nutricionista | Aprobar una cuenta solicitada con perfil de cuidador o nutricionista, conforme a las condiciones del perfil. | Principal: Coordinador. |
 | UC-32 | Suspender cuenta de usuario activa | Suspender una cuenta de usuario que se encuentra activa. | Principal: Coordinador. |
 | UC-33 | Eliminar cuenta de usuario | Eliminar una cuenta de usuario y conservar el contenido publicado cuando corresponda a un cuidador. | Principal: Coordinador. |
@@ -97,7 +106,7 @@ UC-35 es una subfunción compartida. No representa una operación que el Coordin
 
 **Alcance:** Registro y acceso local, condiciones por perfil, gestión básica de cuentas, ayuda contextual y bienvenida. La vista contiene siete actores y los quince casos de uso del apartado 3.
 
-![Vista de acceso, cuentas y ayuda de E1](imagenes/casos-de-uso-acceso-cuentas-ayuda-e1.png)
+![Vista de acceso, cuentas y ayuda de E1](Imagenes/casos-de-uso-acceso-cuentas-ayuda-e1.png)
 
 **Relaciones entre casos de uso.** UC-01 y UC-04 incluyen UC-11. Ambos necesitan enviar un correo para completar el comportamiento previsto. Las flechas de inclusión apuntan desde cada caso base hacia UC-11. La participación del Servicio de correo electrónico se representa mediante su asociación con UC-11.
 
@@ -110,6 +119,19 @@ La vista no utiliza relaciones de extensión ni generalizaciones entre casos de 
 El inicio de sesión no se incluye en todos los casos protegidos. La comprobación de la contraseña actual al eliminar la cuenta tampoco implica un nuevo inicio de sesión.
 
 La imagen se conserva en el repositorio con el nombre usado para esta referencia. Las revisiones de esta vista actualizarán el mismo archivo. Las nuevas vistas tendrán archivos distintos, de acuerdo con la [guía de modelos](README.md).
+
+### 4.2 Vista de recetas y datos de salud
+
+**Frontera del sistema:** Proyecto Simbiosis.
+
+**Alcance:** Publicación y edición de recetas propias por ls nutricionistas.
+
+![Vista de recetas y datos de salud de E2](Imagenes/casos-de-uso-salud-recetas-e2.png)
+
+**Relaciones entre casos de uso.** 
+
+La imagen se conserva en el repositorio con el nombre usado para esta referencia. Las revisiones de esta vista actualizarán el mismo archivo. Las nuevas vistas tendrán archivos distintos, de acuerdo con la [guía de modelos](README.md).
+
 
 ## 5 Respaldo en los requisitos
 
